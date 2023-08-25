@@ -1,0 +1,3 @@
+/home/japesh/rws/jenkins/jenkins_test/build/CMakeFiles/waresense.dir
+/home/japesh/rws/jenkins/jenkins_test/build/CMakeFiles/edit_cache.dir
+/home/japesh/rws/jenkins/jenkins_test/build/CMakeFiles/rebuild_cache.dir

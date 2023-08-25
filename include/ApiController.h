@@ -11,6 +11,7 @@
 typedef SimpleWeb::Server<SimpleWeb::HTTP> HttpServer;
 typedef SimpleWeb::Client<SimpleWeb::HTTP> HttpClient;
 class RabbitMqController;
+class MongoDB;
 class ApiController
 {
 public:
@@ -24,6 +25,7 @@ public:
     std::string _wcsIp = "";
 
     RabbitMqController *rabbitMqController;
+    MongoDB *mongoDB;
     ApiController()
     {
 
@@ -33,7 +35,7 @@ public:
         _wcsIp = "127.0.0.1";
         server.config.port = 9019;
         server_thread = std::thread(&ApiController::server_loop, this);
-        // createRabbitMq();
+        createMongoDb();
         // char const *j = "127.0.0.1";
         recieveTask();
     }
@@ -64,7 +66,7 @@ public:
         server.start();
     }
 
-    void createRabbitMq();
+    void createMongoDb();
 
     void recieveTask();
 

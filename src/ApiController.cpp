@@ -2,11 +2,12 @@
 // #include "RabbitMqController.h"
 #include "Mongo.h"
 
-void ApiController::createRabbitMq()
+void ApiController::createMongoDb()
 {
     // rabbitMqController = new RabbitMqController("10.113.18.249", 5672);
 
     // rabbitMqController->setapiController(this);
+    mongoDB = new MongoDB("mongodb://localhost:27017", "waresense");
 }
 
 void ApiController::recieveTask()
@@ -28,8 +29,8 @@ void ApiController::recieveTask()
             try
             {
                 //structure is as follows
-                obj["site_id"]
-                obj["layouts"] = []
+                // obj["site_id"]
+                // obj["layouts"] = []
 
                 responseJ["errorCode"] = 1000;
                 responseJ["messageText"] = "accepted";
